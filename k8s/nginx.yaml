@@ -6,7 +6,7 @@ metadata:
     app: nginx
 spec:
   ports:
-    - port: 8080
+    - port: 80
   selector:
     app: nginx
     tier: frontend
@@ -48,7 +48,7 @@ spec:
         - image: noncaffeinefree/nginx:1.0.0
           name: nginx
           ports:
-            - containerPort: 8080
+            - containerPort: 80
               name: nginx
           volumeMounts:
             - name: nginx-persistent-storage
